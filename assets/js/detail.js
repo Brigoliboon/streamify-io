@@ -8,6 +8,7 @@ import { createMovieCard } from "./movie-card.js";
 
 import { search } from "./search.js";
 
+
 const movieId = window.localStorage.getItem("movieId");
 
 const pageContent = document.querySelector("[page-content]");
@@ -72,6 +73,12 @@ fetchDataFromServer(
     const movieDetail = document.createElement("div");
     movieDetail.classList.add("movie-detail");
     movieDetail.innerHTML = `
+                <div id="overlay" onclick="off()">
+                <center><div class="movie-body">
+                <h1>${title} (${release_date.split("-")[0]})</h1>
+                <center><iframe class="movie-container" src="https://vidsrc.to/embed/movie/${movieId}" allowfullscreen="1" frameborder="0" style="height:350px; width:700px; margin-top:30px;"></iframe></center>
+                </div></center>
+                </div>
                 <div 
                 class="backdrop-image" 
                 style="background-image: url('${imageBaseURL}${
@@ -131,13 +138,12 @@ fetchDataFromServer(
 
                 <div class="title-wrapper">
                     <h3 class="title-large">Trailer and Clips</h3>
-                    <button class="download-button">Watch Movie</button>
+                    <button class="download-button" onclick="on()">Watch Movie <i class="fa-regular fa-circle-play"></i></button>
                 </div>
                 <div class="slider-list">
                     <div class="slider-inner">
                     </div>
                 </div>
-                <iframe src="https://vidsrc.to/embed/movie/${movieId}" allowfullscreen="1" frameborder="0" style="height:250px; width="500px"></iframe>
                 </div>
     `;
 
@@ -146,7 +152,7 @@ fetchDataFromServer(
       videoCard.classList.add("video-card");
 
       videoCard.innerHTML = `
-        <iframe width="500" height="294" src="https://www.youtube.com/embed/${key}?&theme=dark&color=white&rel=0" frameborder="0" allowfullscreen="1" title="${name}" class="img-cover" loading="lazy"></iframe>
+        <iframe width="500px" height="294px" src="https://www.youtube.com/embed/${key}?&theme=dark&color=white&rel=0" frameborder="0" allowfullscreen="1" title="${name}" class="img-cover" loading="lazy"></iframe>
         `;
 
       movieDetail.querySelector("div.slider-inner").appendChild(videoCard);
