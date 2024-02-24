@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="Tvflix" />
+    <meta name="title" content="Streamify-io" />
     <!-- primary meta tags -->
     <meta
       name="description"
-      content="Tvflix is a movie recommendation app made for my project work. #CAP615"
+      content="Streamify-io is a movie recommendation app made for my project work. #CAP615"
     />
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
@@ -24,11 +24,26 @@
     <!-- Scripting : JS -->
     <script src="assets/js/global.js" defer></script>
     <script src="assets/js/detail.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/ab31844241.js" crossorigin="anonymous"></script>
+    <!-- Title Tag -->
   </head>
   <style>
-    .disqus-thread {
-  z-index:1;
-}
+    #overlay {
+      position: fixed; /* Sit on top of the page content */
+      display: none; /* Hidden by default */
+      width: 100%; /* Full width (cover the whole page) */
+      height: 100%; /* Full height (cover the whole page) */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+      z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
+      cursor: pointer; /* Add a pointer on hover */
+    }
+    .controls{
+      display: none;
+    }
   </style>
   <body>
     <!-- Header -->
@@ -103,24 +118,16 @@
       <nav class="sidebar" sidebar></nav>
       <div class="overlay" overlay menu-toggler></div>
       <article class="container" page-content></article>
-      <div id="disqus-thread"></div>
     </main>
   </body>
-   <script id="dsq-count-scr" src="//https-streamify-io-netlify-app-1.disqus.com/count.js" async></script>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    var disqus_config = function () {
-    this.page.url = '<?php echo get_permalink(); ?>';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = '<?php echo dsq_identifier_for_post($post); ?>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://https-streamify-io-netlify-app-1.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <script>
+    function on() {
+      document.getElementById("overlay").style.display = "block";
+    }
+    
+    function off() {
+      document.getElementById("overlay").style.display = "none";
+      document.getElementById("movie-container").style.display="none";
+    }
+  </script>
 </html>
