@@ -30,8 +30,6 @@
   <script>
     const title = window.localStorage.getItem("title")
     const year = window.localStorage.getItem("year")
-    let url = "https://streamify-io.netlify.app/detail";
-    history.replaceState(null, null, url+"?movie = "+title.replaceAll(" ","-")+"-"+year);
   </script>
   <style>
     #overlay {
