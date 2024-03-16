@@ -74,7 +74,7 @@ fetchDataFromServer(
     movieDetail.classList.add("movie-detail");
     movieDetail.innerHTML = `
                 <head>
-                <meta property= "og:image" content="${imageBaseURL}" />
+                <meta property= "og:url" content="${imageBaseURL}" />
                 </head>
                 <div id="overlay" onclick="off()">
                 <center><div class="movie-body">
