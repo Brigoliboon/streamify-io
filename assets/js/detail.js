@@ -73,6 +73,9 @@ fetchDataFromServer(
     const movieDetail = document.createElement("div");
     movieDetail.classList.add("movie-detail");
     movieDetail.innerHTML = `
+                <head>
+                <meta property= "og:image" content="${imageBaseURL}" />
+                </head>
                 <div id="overlay" onclick="off()">
                 <center><div class="movie-body">
                 <h1>${title} (${release_date.split("-")[0]})</h1>
