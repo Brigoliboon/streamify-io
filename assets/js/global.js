@@ -19,6 +19,8 @@ addEventOnElements(searchTogglers, "click", function () {
 
 const getMovieDetail = function (movieId) {
   window.localStorage.setItem("movieId", String(movieId));
+  window.localStorage.setItem("title", String(title))
+  window.localStorage.setItem("year", String(release_date.split("-")[0]))
 };
 
 const getMovieList = function (urlParam, genreName) {
