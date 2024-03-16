@@ -17,8 +17,10 @@ addEventOnElements(searchTogglers, "click", function () {
 
 // store movieId in 'localStorage' when you click any movie card
 
-const getMovieDetail = function (movieId) {
+const getMovieDetail = function (movieId,title,year) {
   window.localStorage.setItem("movieId", String(movieId));
+  window.localStorage.setItem("title", String(title))
+  window.localStorage.setItem("year", String(year.split("-")[0]))
 };
 
 const getMovieList = function (urlParam, genreName) {
