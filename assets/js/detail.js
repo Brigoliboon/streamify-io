@@ -69,8 +69,6 @@ fetchDataFromServer(
     } = movie;
 
     document.title = `${title} - Streamify-io`;
-    window.localStorage.setItem("title", String(title))
-    window.localStorage.setItem("year", String(release_date.split("-")[0]))
     const movieDetail = document.createElement("div");
     movieDetail.classList.add("movie-detail");
     movieDetail.innerHTML = `

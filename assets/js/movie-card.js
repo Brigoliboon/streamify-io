@@ -9,7 +9,8 @@ export function createMovieCard(movie) {
 
   const card = document.createElement("div");
   card.classList.add("movie-card");
-
+  window.localStorage.setItem("title", String(title))
+  window.localStorage.setItem("year", String(release_date.split("-")[0]))
   card.innerHTML = `
     <figure class="poster-box card-banner">
       <img
