@@ -69,7 +69,7 @@ fetchDataFromServer(
     } = movie;
     document.title = `${title} - Streamify-io`;
     let url = "https://streamify-io.netlify.app/detail";
-    history.replaceState(null, null, url+"?movie = "+ title.replaceAll(" ","-")+"-"+release_date);
+    history.replaceState(null, null, url+"?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]);
     const movieDetail = document.createElement("div");
     movieDetail.classList.add("movie-detail");
     movieDetail.innerHTML = `
