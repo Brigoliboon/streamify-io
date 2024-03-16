@@ -28,8 +28,8 @@
     <!-- Title Tag -->
   </head>
   <script>
-    let url = "https://streamify-io.netlify.app/detail.html";
-    history.replaceState(null, null, url + '?CodeCuponProd="Bla Bla"');
+    let url = "https://streamify-io.netlify.app/detail";
+    history.replaceState(null, null, url + '?movie="$(movie).replaceAll(" ","-") $(release_date.split("-")[0]})"');
   </script>
   <style>
     #overlay {
