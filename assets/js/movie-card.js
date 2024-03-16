@@ -6,7 +6,8 @@ import { imageBaseURL } from "./api.js";
 
 export function createMovieCard(movie) {
   const { poster_path, title, vote_average, release_date, id } = movie;
-
+  window.localStorage.setItem("title", String(title))
+  window.localStorage.setItem("year", String(release_date.split("-")[0]))
   const card = document.createElement("div");
   card.classList.add("movie-card");
   card.innerHTML = `
