@@ -74,15 +74,17 @@ fetchDataFromServer(
     const movieDetail = document.createElement("div");
     movieDetail.classList.add("movie-detail");
     movieDetail.innerHTML = `
-                <head>
-                <meta property="og:title" content="${title} - Streamify-io">
-                <meta property="og:type" content="image.poster" />
-                <meta property="og:description" content="${overview}">
-                <meta property="og:image" content="${imageBaseURL}${
-                  "w1280" || "original"
-                }${backdrop_path || poster_path}')">
-                <meta property="og:url" content="${NewUrl}">
-                </head>
+                <html prefix="og: https://ogp.me/ns#">
+                  <head>
+                  <meta property="og:title" content="${title} - Streamify-io">
+                  <meta property="og:type" content="image.poster" />
+                  <meta property="og:description" content="${overview}">
+                  <meta property="og:image" content="${imageBaseURL}${
+                    "w1280" || "original"
+                  }${backdrop_path || poster_path}">
+                  <meta property="og:url" content="${NewUrl}">
+                  </head>
+                </html>
                 <div id="overlay" onclick="off()">
                 <center><div class="movie-body">
                 <h1>${title} (${release_date.split("-")[0]})</h1>
