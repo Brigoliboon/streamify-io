@@ -70,11 +70,18 @@ fetchDataFromServer(
     document.title = `${title} - Streamify-io`;
     let url = "https://streamify-io.netlify.app/detail";
     history.replaceState(null, null, url+"?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]);
+    const NewUrl = ("https://streamify-io.netlify.app/detail"+ "?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]);
     const movieDetail = document.createElement("div");
     movieDetail.classList.add("movie-detail");
     movieDetail.innerHTML = `
                 <head>
-                <meta property= "schema:url" content="${imageBaseURL}" />
+                <meta property="og:title" content="${title} - Streamify-io">
+                <meta property="og:type" content="image.poster" />
+                <meta property="og:description" content="${overview}">
+                <meta property="og:image" content="${imageBaseURL}${
+                  "w1280" || "original"
+                }${backdrop_path || poster_path}')">
+                <meta property="og:url" content="${NewUrl}">
                 </head>
                 <div id="overlay" onclick="off()">
                 <center><div class="movie-body">
