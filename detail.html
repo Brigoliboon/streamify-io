@@ -29,9 +29,10 @@
   </head>
   <script>
     import {movie} from "./detail.js"
-    var title = movie
+    const title = window.localStorage.getItem("title")
+    const year = window.localStorage.getItem("year")
     let url = "https://streamify-io.netlify.app/detail";
-    history.replaceState(null, null, url + '?movie= ${title}.replaceAll(" ","-")-$(release_date.split("-")[0]})"');
+    history.replaceState(null, null, url + '?movie='+title.replaceAll(" ","-")+"-"+year);
   </script>
   <style>
     #overlay {
