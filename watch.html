@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="Streamify-io" />
-    <script src="assets/js/watch.js" type="module"></script>
     <!-- primary meta tags -->
     <meta
       name="description"
@@ -46,7 +45,6 @@
     </script>
     <!--fetch-->
     <script>
-        window.localStorage.setItem('movieid', string(447277))
         window.localStorage.setItem('about', 'true')
         const movieID = window.localStorage.getItem('movieId')
         const year = window.localStorage.getItem('year')
@@ -60,7 +58,7 @@
 <script>
     document.getElementById("content-container").innerHTML = `
     <main>
-            <iframe id="video"src="${url}" allowfullscreen="1" frameborder="0" height="auto" onload="modify()" style="background-color: black;"></iframe>
+            <iframe id="video"src="https://vidsrc.me/embed/movie/${movieID}" allowfullscreen="1" frameborder="0" height="auto" onload="modify()" style="background-color: black;"></iframe>
             <h1 id="title">${title} ${year}.split("-")[0]</h1>
             <a class="description">${about}</a>
             <div class="server-wrapper N-sub" style="position:relative;">

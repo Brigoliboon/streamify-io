@@ -73,6 +73,7 @@ fetchDataFromServer(
     const NewUrl = ("https://streamify-io.netlify.app/detail"+ "?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]);
     window.localStorage.setItem('title',title)
     window.localStorage.setItem('year',release_date)
+    window.localStorage.setItem('year',overview)
     const movieDetail = document.createElement("div");
     movieDetail.classList.add("movie-detail");
     movieDetail.innerHTML = `
