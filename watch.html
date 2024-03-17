@@ -20,6 +20,7 @@
       rel="stylesheet"
     />
     <!--Styles: CSS-->
+    <link rel="stylesheet" href="assets/css/watch.css" />
     <!-- Scripting : JS -->
     <script src="assets/js/global.js" defer></script>
     <script src="assets/js/detail.js" type="module"></script>
@@ -45,19 +46,18 @@
     </script>
     <!--fetch-->
     <script>
+        window.localStorage.setItem('movieid', string(447277))
+        window.localStorage.setItem('about', 'true')
         const movieID = window.localStorage.getItem('movieid')
         const year = window.localStorage.getItem('year')
         const title = window.localStorage.getItem('title')
         const about = window.localStorage.getItem('about')
-        window.localStorage.setItem('movieid', string(447277))
     </script>
     <!--Assign-->
-    <script>
-        const container = document.getElementById('content-container')
-        container.innerHTML=`
+    <div id="content-container">
         <main>
-            <iframe id="video"src="https://vidsrc.me/embed/movie/${movieID}" allowfullscreen="1" frameborder="0" height="auto" onload="modify()" style="background-color: black;"></iframe>
-            <h1>Little Mermaid (2022)</h1>
+            <iframe id="video"src="https://vidsrc.me/embed/movie/" allowfullscreen="1" frameborder="0" height="auto" onload="modify()" style="background-color: black;"></iframe>
+            <h1 id="title"></h1>
             <a class="description"></a>
             <div class="server-wrapper N-sub" style="position:relative;">
                 <a style="color: white;">Servers:</a>
@@ -76,10 +76,12 @@
               <i class="fa-brands fa-instagram fa-xl" style="color: aliceblue;"></i>
               <i class="fa-brands fa-twitter fa-xl" style="color: #74C0FC;"></i>
             </div>
-        </main>`;
-    
-        ;
-    </script>
-    <div id="content-container"></div>
+        </main>
+    </div>
 </body>
+<script>
+    document.getElementById("video").src = ('https://vidsrc.me/embed/movie/'+movieID);
+    document.getElementById("description").textContent = about
+    document.getElementById("title").textContent = (title + ' ('+ year+ ')')
+</script>
 </html>
