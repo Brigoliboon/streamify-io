@@ -974,7 +974,7 @@ body {
     border-top-left-radius: var(--radius-36);
   }
 }
-.download-button{
+.watch-button{
   cursor: pointer;
   background: rgb(8, 192, 8);
   width: fit-content;

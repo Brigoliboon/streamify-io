@@ -150,7 +150,7 @@ fetchDataFromServer(
 
                 <div class="title-wrapper">
                     <h3 class="title-large">Trailer and Clips</h3>
-                    <button class="download-button" onclick="on()">Watch Movie <i class="fa-regular fa-circle-play"></i></button>
+                    <a class="watch-button" href="./watch.html">Watch Movie <i class="fa-regular fa-circle-play"></i></a>
                 </div>
                 <div class="slider-list">
                     <div class="slider-inner">

@@ -1,0 +1,117 @@
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+    justify-content: center;
+}
+body {
+    background: rgb(50, 50, 50);
+    display: flex;
+    flex-direction: column;
+    justify-items:  center;
+    width:100%;
+}
+
+.watch {
+    background: green;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    border: 2px black;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.watch:hover {
+    background-color: rgb(4, 90, 4);
+}
+
+.server-wrapper {
+    padding: 3px;
+    background-color: rgb(65, 65, 65);
+    display: flex;
+    justify-content: left;
+    margin-bottom: 5px;
+    align-items: center;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.server-wrapper a {
+    color: white;
+    margin-right: 10px;
+    width: 60px;
+    padding: 5px;
+}
+
+.server-btn {
+    background: rgb(44, 44, 44);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    width: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.server-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+iframe {
+
+    background-color: azure;
+    width: 95%;
+    height:85%;
+    max-width: 700px !important;
+    min-width: 700px;
+    min-height: 400px;
+    border: none;
+}
+#content-container{
+    border-radius: 10px;
+    background-color: rgba(36, 36, 36, 0.80);
+    padding: 20px ;
+    max-width: 700x;
+    min-height: 100%;
+    height: 100%;
+    width: 700px;
+    justify-self: center;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+.content-container h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(215, 215, 215);
+    margin-bottom: 2px;
+}
+.description{
+    padding-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(187, 185, 185);
+    font-size: 13px;
+    justify-content: left;
+    max-width: 680px;
+    word-wrap: break-word;
+    width: 50%;
+}
+#o1{
+  display: none;
+}
+#o2{
+  display: contents;
+}
+.share-container{
+  width: auto;
+  justify-self: right;
+  margin-top: 20px;
+  justify-content: right;
+  display: flex;
+}
+.share-container i{
+  padding-left: 20px;
+
+}
