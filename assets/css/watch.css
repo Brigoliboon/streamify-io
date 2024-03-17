@@ -83,7 +83,7 @@ iframe {
     vertical-align: top;
     text-align: left;
 }
-.content-container h1{
+#title{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(215, 215, 215);
     margin-bottom: 2px;
