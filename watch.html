@@ -37,7 +37,7 @@
             }
             else if (id == 's2'){
                 document.getElementById("video").src = ''
-                document.getElementById("video").src = ('https://vidsrc.to/embed/movie/'+movieID);
+                document.getElementById("video").src = ('https://vidsrc.me/embed/movie/'+movieID);
                 document.getElementById("o1").style.display='none';
                 document.getElementById("o2").style.display='contents';
               }
@@ -57,7 +57,7 @@
 <script>
     document.getElementById("content-container").innerHTML = `
     <main>
-            <iframe id="video"src="https://vidsrc.to/embed/movie/${movieID}" allowfullscreen="1" frameborder="0" height="auto" onload="modify()" style="background-color: black;"></iframe>
+            <iframe id="video"src="https://vidsrc.me/embed/movie/${movieID}" allowfullscreen="1" frameborder="0" height="auto" onload="modify()" style="background-color: black;"></iframe>
             <h1 id="title">${title} ${year.split("-")[0]}</h1>
             <a class="description">${about}</a>
             <div class="server-wrapper N-sub" style="position:relative;">
