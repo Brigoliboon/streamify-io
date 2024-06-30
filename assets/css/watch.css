@@ -2,13 +2,13 @@ html{
     scroll-behavior: smooth;
     width: 100%;
     justify-content: center;
+    align-content: center;
 }
 body {
     background: rgb(50, 50, 50);
     display: flex;
     flex-direction: column;
     justify-items:  center;
-    width:100%;
 }
 
 .watch {
@@ -115,4 +115,8 @@ iframe {
   padding-left: 20px;
   cursor: pointer;
 
+}
+#disqus_thread{
+    width: auto;
+    max-width: 700px !important;
 }
