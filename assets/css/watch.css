@@ -127,14 +127,23 @@ iframe {
     padding:20px;
 }
 @media only screen and (max-width: 768px) {
+    #content-container{
+        max-width: 100% !important;
+    }
     .watch{
         width: 100% !important;
     }
     iframe{
         height: 500px;
         min-width: none;
-        max-width: 300px;
+        max-width: 100%;
         width: 300px;
         max-height: 500px;
     }
+    #disqus_thread{
+        margin-top: 20px;
+        width: 100%;
+        max-width: 100% !important;
+
+    } 
 }
