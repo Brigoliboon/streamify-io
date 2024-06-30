@@ -119,8 +119,9 @@ iframe {
 #disqus_thread{
     margin-top: 20px;
     min-width: 700px;
-    max-width: 700px !important;
+    width: 740px;
+    max-width: 800px !important;
 }
 #dsq-app8478{
-    padding:10px;
+    padding:20px;
 }
