@@ -119,10 +119,10 @@ iframe {
 
 }
 #disqus_thread{
+    position: relative;
+    height: auto;
     margin-top: 20px;
-    min-width: 700px;
-    width: 740px;
-    max-width: 800px !important;
+    width: 700px;
 }
 .player{
     position: relative;
@@ -135,8 +135,9 @@ iframe {
         max-width: 100% !important;
     }
     #disqus_thread{
+        overflow: hidden;
         position: relative;
-        width:fit-content !important;
+        width:100% !important;
         height: auto;
         margin-top: 20px;
     }
