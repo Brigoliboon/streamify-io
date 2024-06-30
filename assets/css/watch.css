@@ -131,6 +131,7 @@ iframe {
     }
     #disqus_thread{
         width: 100% !important;
+        max-width: 100% !important;
         margin-top: 20px;
     }
 }
