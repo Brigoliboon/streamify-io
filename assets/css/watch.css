@@ -134,7 +134,6 @@ iframe {
     #disqus_thread{
         position: relative;
         width:100% !important;
-        height: auto;
         margin-top: 20px;
     }
 }
