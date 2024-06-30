@@ -134,11 +134,10 @@ iframe {
         width: 100% !important;
     }
     iframe{
-        height: 500px;
-        min-width: none;
+        height: 300px;
+        min-width:auto;
         max-width: 100%;
-        width: 300px;
-        max-height: 500px;
+        max-height: 300px;
     }
     #disqus_thread{
         margin-top: 20px;
