@@ -65,6 +65,10 @@ body {
 
 iframe {
     position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     background-color: azure;
     width: 100%;
     height: 100%;
@@ -132,7 +136,7 @@ iframe {
     }
     #disqus_thread{
         position: relative;
-        width:auto;
+        width:fit-content !important;
         height: auto;
         margin-top: 20px;
     }
