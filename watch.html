@@ -60,7 +60,9 @@
 <script>
     document.getElementById("content-container").innerHTML = `
     <main>
+          <div class="player">
             <iframe id="video"src="https://vidsrc.me/embed/movie/${movieID}" allowfullscreen="1" frameborder="0" height="auto" onload="modify()" style="background-color: black;"></iframe>
+          </div>
             <h1 id="title">${title} ${year.split("-")[0]}</h1>
             <a class="description">${about}</a>
             <div class="server-wrapper N-sub" style="position:relative;">
