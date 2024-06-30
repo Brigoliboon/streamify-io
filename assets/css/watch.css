@@ -137,8 +137,8 @@ iframe {
         max-width: 100% !important;
     }
     #disqus_thread{
-        width: 100% !important;
-        max-width: 100% !important;
+        width:auto;
+        max-width: fit-content !important;
         margin-top: 20px;
     }
 }
