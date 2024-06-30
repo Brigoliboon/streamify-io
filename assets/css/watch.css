@@ -120,10 +120,10 @@ iframe {
     max-width: 800px !important;
 }
 .player{
+    position: relative;
     overflow: hidden;
     width: 100%;
     padding-top: 56.25%;
-    position: absolute;
 }
 @media only screen and (max-width: 768px) {
     #content-container{
@@ -132,4 +132,5 @@ iframe {
     #disqus_thread{
         width: 100% !important;
         margin-top: 20px;
+    }
 }
