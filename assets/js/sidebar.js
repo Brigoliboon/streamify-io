@@ -36,7 +36,6 @@ export function sidebar() {
       </div>
       <div class="sidebar-footer">
         <p class="copyright">Copyright 2023</p>
-        <a href="https://github.com/shivam171" style="font-size:15px"><img src="https://img.icons8.com/ios-filled/25/ffffff/github.png" alt="github"/>shivam171</a>
         <br/>
         <img
           src="./assets/images/tmdb-logo.png"
