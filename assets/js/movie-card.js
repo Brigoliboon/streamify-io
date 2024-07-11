@@ -6,6 +6,7 @@ import { imageBaseURL } from "./api.js";
 export function createMovieCard(movie) {
   const { poster_path, title, vote_average, release_date, id } = movie;
   const card = document.createElement("div");
+  const NewUrl = ("https://streamify-io.netlify.app/detail"+ "?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]);
   card.classList.add("movie-card");
   card.innerHTML = `
     <figure class="poster-box card-banner">
@@ -36,8 +37,5 @@ export function createMovieCard(movie) {
 
     <a href="${NewUrl}" class="card-btn" title="${title}" onclick="getMovieDetail(${id})"></a>
   `;
-  let url = "https://streamify-io.netlify.app/detail";
-  history.replaceState(null, null, url+"?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]);
-  const NewUrl = ("https://streamify-io.netlify.app/detail"+ "?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]);
   return card;
 }
