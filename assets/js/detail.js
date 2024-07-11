@@ -44,7 +44,7 @@ const getDirectors = function (crewList) {
 const filterVideos = function (videoList) {
   return videoList.filter(
     ({ type, site }) =>
-      (type === "Trailer" || type === "Teaser") && site === "Youtube"
+      (type === "Trailer" || type === "Teaser") && site === "YouTube"
   );
 };
 
@@ -88,6 +88,12 @@ fetchDataFromServer(
                   <meta property="og:url" content="${NewUrl}">
                   </head>
                 </html>
+                <div id="overlay" onclick="off()">
+                <center><div class="movie-body">
+                <h1>${title} (${release_date.split("-")[0]})</h1>
+                <center><iframe class="movie-container" src="https://vidsrc.to/embed/movie/${movieId}" allowfullscreen="1" frameborder="0" style="height:350px; width:700px; margin-top:30px;"></iframe></center>
+                </div></center>
+                </div>
                 <div 
                 class="backdrop-image" 
                 style="background-image: url('${imageBaseURL}${
@@ -155,18 +161,16 @@ fetchDataFromServer(
                 </div>
                 </div>
     `;
-    
 
     for (const { key, name } of filterVideos(videos)) {
       const videoCard = document.createElement("div");
       videoCard.classList.add("video-card");
 
       videoCard.innerHTML = `
-      <iframe width="500" height="294" src="https://www.youtube.com/embed/${key}?&theme=dark&color=white&rel=0"
-        frameborder="0" allowfullscreen="1" title="${name}" class="img-cover" loading="lazy"></iframe>
-    `;
+        <iframe width="500px" height="294px" src="https://www.youtube.com/embed/${key}?&theme=dark&color=white&rel=0" frameborder="0" allowfullscreen="1" title="${name}" class="img-cover" loading="lazy"></iframe>
+        `;
 
-      movieDetail.querySelector(".slider-inner").appendChild(videoCard);
+      movieDetail.querySelector("div.slider-inner").appendChild(videoCard);
     }
 
     pageContent.appendChild(movieDetail);
