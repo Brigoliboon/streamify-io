@@ -161,16 +161,18 @@ fetchDataFromServer(
                 </div>
                 </div>
     `;
+    
 
     for (const { key, name } of filterVideos(videos)) {
       const videoCard = document.createElement("div");
       videoCard.classList.add("video-card");
 
       videoCard.innerHTML = `
-        <iframe width="500px" height="294px" src="https://www.youtube.com/embed/${key}?&theme=dark&color=white&rel=0" frameborder="0" allowfullscreen="1" title="${name}" class="img-cover" loading="lazy"></iframe>
-        `;
+      <iframe width="500" height="294" src="https://www.youtube.com/embed/${key}?&theme=dark&color=white&rel=0"
+        frameborder="0" allowfullscreen="1" title="${name}" class="img-cover" loading="lazy"></iframe>
+    `;
 
-      movieDetail.querySelector("div.slider-inner").appendChild(videoCard);
+      movieDetail.querySelector(".slider-inner").appendChild(videoCard);
     }
 
     pageContent.appendChild(movieDetail);
