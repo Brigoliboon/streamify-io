@@ -68,9 +68,10 @@ fetchDataFromServer(
       key,
     } = movie;
     document.title = `${title} - Streamify-io`;
-    let url = "https://streamify-io.netlify.app/detail";
-    history.replaceState(null, null, url+"?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]);
-    const NewUrl = ("https://streamify-io.netlify.app/detail"+ "?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]);
+    const titleSlug = title.replaceAll(" ", "-").toLowerCase();
+    const url = `https://streamify-io.netlify.app/detail/${movieId}/${titleSlug}`;
+    history.replaceState(null, null, url);
+    const NewUrl = url;
     window.localStorage.setItem('title',title)
     window.localStorage.setItem('year',release_date)
     window.localStorage.setItem('about',overview)
