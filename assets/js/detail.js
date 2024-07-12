@@ -69,8 +69,13 @@ fetchDataFromServer(
     } = movie;
     document.title = `${title} - Streamify-io`;
     let url = "https://streamify-io.netlify.app/detail";
+<<<<<<< Updated upstream
     history.replaceState(null, null, url+"?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]);
     const NewUrl = ("https://streamify-io.netlify.app/detail"+ "?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]);
+=======
+    history.replaceState(null, null, url+"?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]+"&id="+String(id));
+    const NewUrl = ("https://streamify-io.netlify.app/detail"+ "?movie="+title.replaceAll(" ","-")+"-"+release_date.split("-")[0]+"&id="+String(id));
+>>>>>>> Stashed changes
     window.localStorage.setItem('title',title)
     window.localStorage.setItem('year',release_date)
     window.localStorage.setItem('about',overview)
