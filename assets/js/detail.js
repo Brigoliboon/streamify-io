@@ -47,9 +47,6 @@ const filterVideos = function (videoList) {
       (type === "Trailer" || type === "Teaser") && site === "YouTube"
   );
 };
-//load content from link params
-  let params = URLSearchParams()
-  params.querySelector()
 
 fetchDataFromServer(
   `https://api.themoviedb.org/3/movie/${movieId}?api_key=${api_key}&append_to_response=casts,videos,images,releases`,
