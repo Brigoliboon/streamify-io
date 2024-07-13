@@ -74,7 +74,7 @@ fetchDataFromServer(
     const titleSlug = title.replaceAll(" ", "-").toLowerCase();
     let url = "https://streamify-io.netlify.app/detail";
     window.history.pushState({}, '', NewUrl);
-    const NewUrl = `https://streamify-io.netlify.app/detail?movie=${movieId}&id=${titleSlug}`;
+    const NewUrl = `https://streamify-io.netlify.app/detail?movie=${titleSlug}&id=${movieId}`;
     window.localStorage.setItem('title',title)
     window.localStorage.setItem('year',release_date)
     window.localStorage.setItem('about',overview)

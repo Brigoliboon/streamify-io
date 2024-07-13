@@ -7,7 +7,7 @@ export function createMovieCard(movie) {
   const { poster_path, title, vote_average, release_date, id } = movie;
   const card = document.createElement("div");
   const titleSlug = title.replaceAll(" ", "-").toLowerCase();
-  const NewUrl = `https://streamify-io.netlify.app/detail?movie=${id}&id=${titleSlug}`;
+  const NewUrl = `https://streamify-io.netlify.app/detail?movie=${titleSlug}&id=${id}`;
   card.classList.add("movie-card");
   card.innerHTML = `
     <figure class="poster-box card-banner">
