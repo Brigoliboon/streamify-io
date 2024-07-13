@@ -10,7 +10,7 @@ import { search } from "./search.js";
 
 const paramsId = new URLSearchParams(window.location.search);
 const Idfromquery = paramsId.get['id']
-const movieId = window.localStorage.getItem("movieId") || Idfromquery;
+const movieId = /*window.localStorage.getItem("movieId")*/Idfromquery;
 
 const pageContent = document.querySelector("[page-content]");
 sidebar();
@@ -74,7 +74,7 @@ fetchDataFromServer(
     const titleSlug = title.replaceAll(" ", "-").toLowerCase();
     let url = "https://streamify-io.netlify.app/detail";
     window.history.pushState({}, '', newUrl);
-    const NewUrl = `https://streamify-io.netlify.app/detail?${movieId}&id=${titleSlug}`;
+    const NewUrl = `https://streamify-io.netlify.app/detail?movie=${movieId}&id=${titleSlug}`;
     window.localStorage.setItem('title',title)
     window.localStorage.setItem('year',release_date)
     window.localStorage.setItem('about',overview)
