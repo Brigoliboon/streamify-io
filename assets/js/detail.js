@@ -8,11 +8,11 @@ import { createMovieCard } from "./movie-card.js";
 
 import { search } from "./search.js";
 
-
-const movieId = window.localStorage.getItem("movieId");
+const paramsId = new URLSearchParams(window.location.search);
+const Idfromquery = paramsId.get['id']
+const movieId = window.localStorage.getItem("movieId") || Idfromquery;
 
 const pageContent = document.querySelector("[page-content]");
-
 sidebar();
 
 const getGenres = function (genreList) {
@@ -47,6 +47,9 @@ const filterVideos = function (videoList) {
       (type === "Trailer" || type === "Teaser") && site === "YouTube"
   );
 };
+//load content from link params
+  let params = URLSearchParams()
+  params.querySelector()
 
 fetchDataFromServer(
   `https://api.themoviedb.org/3/movie/${movieId}?api_key=${api_key}&append_to_response=casts,videos,images,releases`,
@@ -69,9 +72,9 @@ fetchDataFromServer(
     } = movie;
     document.title = `${title} - Streamify-io`;
     const titleSlug = title.replaceAll(" ", "-").toLowerCase();
-    const url = `https://streamify-io.netlify.app/detail/${movieId}/${titleSlug}`;
-    history.replaceState(null, null, url);
-    const NewUrl = url;
+    let url = "https://streamify-io.netlify.app/detail";
+    window.history.pushState({}, '', newUrl);
+    const NewUrl = `https://streamify-io.netlify.app/detail?${movieId}&id=${titleSlug}`;
     window.localStorage.setItem('title',title)
     window.localStorage.setItem('year',release_date)
     window.localStorage.setItem('about',overview)
