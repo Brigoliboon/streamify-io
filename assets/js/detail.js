@@ -9,7 +9,7 @@ import { createMovieCard } from "./movie-card.js";
 import { search } from "./search.js";
 
 const paramsId = new URLSearchParams(window.location.search);
-const Idfromquery = paramsId.get['id']
+const Idfromquery = paramsId.get('id')
 const movieId = /*window.localStorage.getItem("movieId")*/Idfromquery;
 
 const pageContent = document.querySelector("[page-content]");
